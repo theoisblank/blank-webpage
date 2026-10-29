@@ -1,14 +1,35 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="w-full h-full">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <title>Blank</title>
+    <style is:global>
+      @import "tailwindcss";
+
+      :root {
+
+      }
+    </style>
+    <script>
+      function updateTheme() {
+        const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (isDark) {
+          document.documentElement.setAttribute('data-theme', 'dark')
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light')
+        }
+      }
+
+      updateTheme()
+
+      window.matchMedia('(prefers-color-scheme: dark)')
+            .addEventListener('change', updateTheme)
+    </script>
   </head>
-  <body>
+  <body class="w-full h-full">
     <slot />
   </body>
 </html>
