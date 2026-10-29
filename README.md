@@ -40,6 +40,8 @@ All commands are run from the root of the project, from a terminal:
 | `deno preview`         | Preview your build locally, before deploying     |
 | `deno astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `deno astro -- --help` | Get help using the Astro CLI                     |
+| `deno task format`     | Format source files with Prettier                |
+| `deno task format:check` | Check source files against the formatting rules |
 
 ## 👀 Want to learn more?
 
