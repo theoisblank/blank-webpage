@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { WelcomeBackground } from './components/blank/welcome-background'
+import { WelcomeBackground } from './components/blank/welcome-background.tsx'
 
 export default function App() {
   const snapContainerRef = useRef<HTMLDivElement>(null)

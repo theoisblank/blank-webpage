@@ -1,0 +1,36 @@
+{
+  "nodeModulesDir": "auto",
+  "imports": {
+    "@base-ui/react": "npm:@base-ui/react@^1.9.0",
+    "@fontsource-variable/chivo-mono": "npm:@fontsource-variable/chivo-mono@^5.3.0",
+    "@fontsource-variable/geist": "npm:@fontsource-variable/geist@^5.3.0",
+    "@tailwindcss/vite": "npm:@tailwindcss/vite@^4.3.3",
+    "@types/react": "npm:@types/react@^19.3.0",
+    "@types/react-dom": "npm:@types/react-dom@^19.3.0",
+    "@vitejs/plugin-react": "npm:@vitejs/plugin-react@^6.1.2",
+    "lucide-react": "npm:lucide-react@^1.63.0",
+    "motion": "npm:motion@^14.7.1",
+    "prettier": "npm:prettier@^3.9.10",
+    "react": "npm:react@^19.3.1",
+    "react-dom": "npm:react-dom@^19.3.1",
+    "shaders": "npm:shaders@^4.0.5",
+    "tailwindcss": "npm:tailwindcss@^4.3.3",
+    "typescript": "npm:typescript@^7.0.2",
+    "vite": "npm:vite@^8.3.5"
+  },
+  "tasks": {
+    "dev": "deno run -A npm:vite --config src/vite.config.ts --host 127.0.0.1",
+    "build": "deno check src/main.tsx src/vite.config.ts && deno run -A npm:vite build --config src/vite.config.ts",
+    "preview": "deno run -A npm:vite preview --config src/vite.config.ts",
+    "format": "deno run -A npm:prettier --write --single-quote --no-semi \"src/**/*.{js,jsx,ts,tsx,mjs,cjs,css,scss}\" src/vite.config.ts",
+    "format:check": "deno run -A npm:prettier --check --single-quote --no-semi \"src/**/*.{js,jsx,ts,tsx,mjs,cjs,css,scss}\" src/vite.config.ts"
+  },
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  }
+}

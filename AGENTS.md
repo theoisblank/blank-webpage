@@ -1,9 +1,9 @@
 ## Development
 
-- Start the development server with `npm run dev`.
-- Create a production build with `npm run build`.
-- Preview a production build with `npm run preview`.
-- Check formatting with `npm run format:check`.
+- Start the development server with `deno task dev`.
+- Create a production build with `deno task build`.
+- Preview a production build with `deno task preview`.
+- Check formatting with `deno task format:check`.
 
 ## Documentation
 

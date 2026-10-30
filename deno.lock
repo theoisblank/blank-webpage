@@ -10,12 +10,14 @@
     "npm:@vitejs/plugin-react@^6.1.2": "6.1.2_vite@8.3.5",
     "npm:lucide-react@^1.63.0": "1.63.0_@types+react@19.3.0_react@19.3.1",
     "npm:motion@^14.7.1": "14.7.1_react@19.3.1_react-dom@19.3.1",
+    "npm:prettier@*": "3.9.10",
     "npm:prettier@^3.9.10": "3.9.10",
     "npm:react-dom@^19.3.1": "19.3.1_react@19.3.1",
     "npm:react@^19.3.1": "19.3.1",
     "npm:shaders@^4.0.5": "4.0.5_react@19.3.1_react-dom@19.3.1",
     "npm:tailwindcss@^4.3.3": "4.3.3",
     "npm:typescript@^7.0.2": "7.0.2",
+    "npm:vite@*": "8.3.5",
     "npm:vite@^8.3.5": "8.3.5"
   },
   "npm": {
@@ -802,25 +804,23 @@
     }
   },
   "workspace": {
-    "packageJson": {
-      "dependencies": [
-        "npm:@base-ui/react@^1.9.0",
-        "npm:@fontsource-variable/chivo-mono@^5.3.0",
-        "npm:@fontsource-variable/geist@^5.3.0",
-        "npm:@tailwindcss/vite@^4.3.3",
-        "npm:@types/react-dom@^19.3.0",
-        "npm:@types/react@^19.3.0",
-        "npm:@vitejs/plugin-react@^6.1.2",
-        "npm:lucide-react@^1.63.0",
-        "npm:motion@^14.7.1",
-        "npm:prettier@^3.9.10",
-        "npm:react-dom@^19.3.1",
-        "npm:react@^19.3.1",
-        "npm:shaders@^4.0.5",
-        "npm:tailwindcss@^4.3.3",
-        "npm:typescript@^7.0.2",
-        "npm:vite@^8.3.5"
-      ]
-    }
+    "dependencies": [
+      "npm:@base-ui/react@^1.9.0",
+      "npm:@fontsource-variable/chivo-mono@^5.3.0",
+      "npm:@fontsource-variable/geist@^5.3.0",
+      "npm:@tailwindcss/vite@^4.3.3",
+      "npm:@types/react-dom@^19.3.0",
+      "npm:@types/react@^19.3.0",
+      "npm:@vitejs/plugin-react@^6.1.2",
+      "npm:lucide-react@^1.63.0",
+      "npm:motion@^14.7.1",
+      "npm:prettier@^3.9.10",
+      "npm:react-dom@^19.3.1",
+      "npm:react@^19.3.1",
+      "npm:shaders@^4.0.5",
+      "npm:tailwindcss@^4.3.3",
+      "npm:typescript@^7.0.2",
+      "npm:vite@^8.3.5"
+    ]
   }
 }
