@@ -1,0 +1,53 @@
+.notable-tooltip {
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.notable-tooltip__content {
+  z-index: 1000;
+  width: max-content;
+  max-width: min(16rem, calc(100vw - 2rem));
+  max-height: calc(100vh - 1rem);
+  overflow: auto;
+  padding: var(--notable-spacing-2) var(--notable-spacing-3);
+  border-radius: var(--notable-radius-xl);
+  background: var(--notable-color-text);
+  box-shadow: var(--notable-shadow-lg);
+  color: var(--notable-color-text-inverse);
+  font-family: var(--notable-font-family);
+  font-size: var(--notable-font-size-xs);
+  line-height: var(--notable-line-height-normal);
+  text-align: center;
+  white-space: normal;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.96);
+  transition:
+    opacity var(--notable-duration-base) var(--notable-easing-standard),
+    transform var(--notable-duration-base) var(--notable-easing-spring),
+    visibility 0s linear var(--notable-duration-base);
+}
+
+.notable-tooltip__content[data-open] {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition:
+    opacity var(--notable-duration-base) var(--notable-easing-standard),
+    transform var(--notable-duration-base) var(--notable-easing-spring),
+    visibility 0s linear 0s;
+}
+
+/* Base UI disables transitions while this attribute is set, so the first
+   frame is painted hidden and the open state then animates from it. */
+.notable-tooltip__content[data-starting-style] {
+  opacity: 0;
+  transform: scale(0.96);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .notable-tooltip__content {
+    transition: none;
+  }
+}

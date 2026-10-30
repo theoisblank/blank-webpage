@@ -1,0 +1,57 @@
+/*
+ * The popup starts and ends offset toward its trigger, based on `data-side`,
+ * so it appears to grow out of the anchor. The shared surface styles, including
+ * the scale and fade, live in `internal/styles/floating-surface.css`.
+ * `z-index` has no shared layering token, so it is set locally.
+ */
+.notable-popover {
+  box-sizing: border-box;
+  z-index: 50;
+  width: min(20rem, calc(100vw - var(--notable-spacing-8)));
+  max-height: calc(100dvh - var(--notable-spacing-8));
+  padding: var(--notable-spacing-4);
+  border: var(--notable-border-width) solid var(--notable-color-border);
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+.notable-popover[data-side='top'][data-starting-style],
+.notable-popover[data-side='top'][data-ending-style] {
+  transform: translateY(var(--notable-spacing-2)) scale(0.96);
+}
+
+.notable-popover[data-side='bottom'][data-starting-style],
+.notable-popover[data-side='bottom'][data-ending-style] {
+  transform: translateY(calc(var(--notable-spacing-2) * -1)) scale(0.96);
+}
+
+.notable-popover[data-side='left'][data-starting-style],
+.notable-popover[data-side='left'][data-ending-style] {
+  transform: translateX(var(--notable-spacing-2)) scale(0.96);
+}
+
+.notable-popover[data-side='right'][data-starting-style],
+.notable-popover[data-side='right'][data-ending-style] {
+  transform: translateX(calc(var(--notable-spacing-2) * -1)) scale(0.96);
+}
+
+.notable-popover__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--notable-spacing-1);
+}
+
+.notable-popover__title {
+  margin: 0;
+  color: var(--notable-color-text);
+  font-size: var(--notable-font-size-md);
+  font-weight: var(--notable-font-weight-semibold);
+  line-height: var(--notable-line-height-tight);
+}
+
+.notable-popover__description {
+  margin: 0;
+  color: var(--notable-color-text-muted);
+  font-size: var(--notable-font-size-sm);
+  line-height: var(--notable-line-height-relaxed);
+}

@@ -1,0 +1,81 @@
+.notable-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--notable-spacing-1);
+  border: var(--notable-border-width) solid transparent;
+  border-radius: var(--notable-radius-full);
+  font-family: var(--notable-font-family);
+  font-weight: var(--notable-font-weight-semibold);
+  line-height: var(--notable-line-height-tight);
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.notable-badge--small {
+  padding: 0.125rem var(--notable-spacing-2);
+  font-size: var(--notable-font-size-xs);
+}
+
+.notable-badge--medium {
+  padding: 0.125rem var(--notable-spacing-3);
+  font-size: var(--notable-font-size-sm);
+}
+
+.notable-badge > :where(svg) {
+  width: 1em;
+  height: 1em;
+  flex: 0 0 auto;
+}
+
+.notable-badge--default {
+  background: var(--notable-color-primary);
+  color: var(--notable-color-on-primary);
+}
+
+.notable-badge--secondary {
+  background: var(--notable-color-secondary);
+  color: var(--notable-color-on-secondary);
+}
+
+.notable-badge--outline {
+  border-color: var(--notable-color-border-strong);
+  background: var(--notable-color-surface);
+  color: var(--notable-color-text);
+}
+
+.notable-badge--success {
+  border-color: var(--notable-color-success-border);
+  background: var(--notable-color-success-subtle);
+  color: var(--notable-color-success);
+}
+
+.notable-badge--warning {
+  border-color: var(--notable-color-warning-border);
+  background: var(--notable-color-warning-subtle);
+  color: var(--notable-color-warning);
+}
+
+.notable-badge--danger {
+  border-color: var(--notable-color-danger-border);
+  background: var(--notable-color-danger-subtle);
+  color: var(--notable-color-danger);
+}
+
+.notable-badge__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.notable-badge--info {
+  border-color: var(--notable-color-info-border);
+  background: var(--notable-color-info-subtle);
+  color: var(--notable-color-info);
+}

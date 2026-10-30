@@ -1,0 +1,192 @@
+.notable-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--notable-spacing-2);
+
+  min-height: 2.5rem;
+  padding: var(--notable-spacing-2) var(--notable-spacing-4);
+
+  border: var(--notable-border-width) solid transparent;
+  border-radius: var(--notable-radius-full);
+
+  font-family: var(--notable-font-family);
+  font-size: var(--notable-font-size-sm);
+  line-height: var(--notable-line-height-normal);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  transition:
+    background-color var(--notable-duration-fast) var(--notable-easing-standard),
+    color var(--notable-duration-fast) var(--notable-easing-standard),
+    border-color var(--notable-duration-fast) var(--notable-easing-standard),
+    box-shadow var(--notable-duration-fast) var(--notable-easing-standard);
+}
+
+.notable-button:focus-visible {
+  outline: 2px solid var(--notable-color-focus);
+  outline-offset: 2px;
+}
+
+.notable-button:disabled,
+.notable-button[aria-disabled='true'] {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.notable-button__content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: inherit;
+}
+
+/* Primary */
+
+.notable-button--primary {
+  background: var(--notable-color-primary);
+  color: var(--notable-color-on-primary);
+}
+
+.notable-button--primary:hover:not(:disabled) {
+  background: var(--notable-color-primary-hover);
+}
+
+.notable-button--primary:active:not(:disabled) {
+  background: var(--notable-color-primary-active);
+}
+
+/* Secondary */
+
+.notable-button--secondary {
+  background: var(--notable-color-secondary);
+  color: var(--notable-color-on-secondary);
+}
+
+.notable-button--secondary:hover:not(:disabled) {
+  background: var(--notable-color-secondary-hover);
+}
+
+.notable-button--secondary:active:not(:disabled) {
+  background: var(--notable-color-secondary-active);
+}
+
+/* Outline */
+
+.notable-button--outline {
+  border-color: var(--notable-color-border-strong);
+  background: transparent;
+  color: var(--notable-color-text);
+}
+
+.notable-button--outline:hover:not(:disabled) {
+  background: var(--notable-color-surface-hover);
+}
+
+.notable-button--outline:active:not(:disabled) {
+  background: var(--notable-color-surface-active);
+}
+
+/* Ghost */
+
+.notable-button--ghost {
+  background: transparent;
+  color: var(--notable-color-text);
+}
+
+.notable-button--ghost:hover:not(:disabled) {
+  background: var(--notable-color-surface-hover);
+}
+
+.notable-button--ghost:active:not(:disabled) {
+  background: var(--notable-color-surface-active);
+}
+
+/* Danger */
+
+.notable-button--danger {
+  border-color: var(--notable-color-danger-border);
+  background: transparent;
+  color: var(--notable-color-danger);
+}
+
+.notable-button--danger:hover:not(:disabled) {
+  border-color: var(--notable-color-danger);
+  background: var(--notable-color-danger-subtle);
+}
+
+.notable-button--danger:active:not(:disabled) {
+  background: var(--notable-color-danger-border);
+}
+
+/* Link */
+
+.notable-button--link {
+  min-height: auto;
+  padding: 0;
+  border-color: transparent;
+  border-radius: var(--notable-radius-md);
+  background: transparent;
+  color: var(--notable-color-primary);
+  text-underline-offset: 4px;
+}
+
+.notable-button--link:hover:not(:disabled) {
+  text-decoration: underline;
+}
+
+/* Sizes */
+
+.notable-button--small {
+  min-height: 2rem;
+  padding: var(--notable-spacing-1) var(--notable-spacing-3);
+  font-size: var(--notable-font-size-xs);
+}
+
+.notable-button--medium {
+  min-height: 2.5rem;
+  padding: var(--notable-spacing-2) var(--notable-spacing-4);
+}
+
+.notable-button--large {
+  min-height: 2.75rem;
+  padding: var(--notable-spacing-3) var(--notable-spacing-6);
+}
+
+/* Icon sizes */
+
+.notable-button--icon {
+  width: 2.5rem;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  padding: 0;
+  aspect-ratio: 1;
+}
+
+.notable-button--icon-small {
+  width: 2rem;
+  min-width: 2rem;
+  min-height: 2rem;
+  padding: 0;
+  aspect-ratio: 1;
+}
+
+.notable-button--icon-large {
+  width: 2.75rem;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0;
+  aspect-ratio: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .notable-button {
+    transition: none;
+  }
+}
