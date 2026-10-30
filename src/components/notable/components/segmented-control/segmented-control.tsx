@@ -13,12 +13,12 @@ import {
   type Ref,
 } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
-import { selectEdgeRadioOnKeyDown } from '../../internal/helpers/radio-edge-keys.js';
-import { SPRING_LAYOUT } from '../../styles/motion.js';
+import { selectEdgeRadioOnKeyDown } from '../../internal/helpers/radio-edge-keys.ts';
+import { SPRING_LAYOUT } from '../../styles/motion.ts';
 import {
   useSelectorDrag,
   type SelectorBounds,
-} from '../../internal/helpers/use-selector-drag.js';
+} from '../../internal/helpers/use-selector-drag.ts';
 import './segmented-control.css';
 
 /** Available segmented control sizes. */

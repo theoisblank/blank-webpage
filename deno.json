@@ -1,6 +1,7 @@
 {
   "nodeModulesDir": "auto",
   "imports": {
+    "@/": "./src/",
     "@base-ui/react": "npm:@base-ui/react@^1.9.0",
     "@fontsource-variable/chivo-mono": "npm:@fontsource-variable/chivo-mono@^5.3.0",
     "@fontsource-variable/geist": "npm:@fontsource-variable/geist@^5.3.0",
