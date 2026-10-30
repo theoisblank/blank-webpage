@@ -1,22 +1,14 @@
 ## Development
 
-When starting the dev server, use background mode:
-
-```
-astro dev --background
-```
-
-Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
+- Start the development server with `npm run dev`.
+- Create a production build with `npm run build`.
+- Preview a production build with `npm run preview`.
+- Check formatting with `npm run format:check`.
 
 ## Documentation
 
-Full documentation: https://docs.astro.build
+Consult the official documentation when working on related areas:
 
-Consult these guides before working on related tasks:
-
-- [Adding pages, dynamic routes, or middleware](https://docs.astro.build/en/guides/routing/)
-- [Working with Astro components](https://docs.astro.build/en/basics/astro-components/)
-- [Using React, Vue, Svelte, or other framework components](https://docs.astro.build/en/guides/framework-components/)
-- [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
-- [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
-- [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+- [React](https://react.dev/learn)
+- [Vite](https://vite.dev/guide/)
+- [Tailwind CSS](https://tailwindcss.com/docs)
